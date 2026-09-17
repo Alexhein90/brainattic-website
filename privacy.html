@@ -50,7 +50,7 @@
 <div class="wrap">
 <header>
   <h1>Privacy Policy</h1>
-  <p class="sub">SquadBill &middot; Last updated 12 August 2026</p>
+  <p class="sub">SquadBill &middot; Last updated 17 September 2026</p>
 </header>
 <h2>Who we are</h2>
 <p>SquadBill is a mobile application operated by <strong>Brain Attic LLC</strong>, a company registered in Wyoming, United States.</p>
@@ -66,9 +66,9 @@ Email: <strong>pyae@brainattic.dev</strong></p>
 <li>We collect the information you give us when you sign up, the content you create in the app, and basic technical information about your device.</li>
 <li><strong>We collect financial information</strong> — your bank account or PromptPay details — so that people who owe you money can pay you directly.</li>
 <li><strong>We do not process, hold, or move money.</strong> SquadBill records who owes what. Payments happen between you and other people, using your own banking apps.</li>
-<li>Receipt images are sent to Google and OpenAI for text extraction, so we can split bills automatically. You can enter bills manually instead.</li>
+<li>Receipt images are sent to Google and OpenAI to read the items and prices, and only after you give permission in the app. Payment slips are sent the same way if you turn on AI slip check. You can enter bills by hand instead, and turn either off in Me.</li>
 <li><strong>We do not use your data for advertising. We do not sell your data. We do not track you across other apps or websites.</strong></li>
-<li>Receipt and payment slip images are deleted 90 days after a bill is settled.</li>
+<li>Receipt and payment slip images are kept for as long as the bill they belong to exists, so your group can check them later.</li>
 <li>You can delete your account, and everything in it, from inside the app.</li>
 <li>SquadBill is for adults. You must be 18 or over to use it.</li>
 </ul>
@@ -160,6 +160,11 @@ Email: <strong>pyae@brainattic.dev</strong></p>
 <td>Consent</td>
 </tr>
 <tr>
+<td>Check payment slips with AI, if you turn it on</td>
+<td>To confirm payments faster</td>
+<td>Consent</td>
+</tr>
+<tr>
 <td>Send push notifications</td>
 <td>To tell you about messages, bills, and payments</td>
 <td>Consent</td>
@@ -194,11 +199,13 @@ Email: <strong>pyae@brainattic.dev</strong></p>
 <p>Where we rely on consent, you can withdraw it at any time — see Section 9.</p>
 <hr />
 <h2>3. Automated processing and AI</h2>
-<p>SquadBill uses artificial intelligence to read receipts.</p>
+<p>SquadBill uses artificial intelligence for two things: reading receipts, and — if you turn it on — checking payment slips. Nothing else you do in the app is sent to an AI service.</p>
 <p><strong>How it works.</strong> When you photograph a receipt, the image is sent to <strong>Google (Gemini)</strong> and <strong>OpenAI (GPT-4o)</strong>, which extract the text — item names, prices, totals, tax. We use two providers because Thai-language receipts are difficult, and comparing two results is more accurate than trusting one.</p>
 <p><strong>What they receive.</strong> The receipt image itself. If your receipt shows a restaurant name, address, date, or items, those are included. We do not send your name, email, bank details, or any other account information.</p>
 <p><strong>What we do with the result.</strong> The extracted text is used to create the bill. You can edit anything before sending it.</p>
 <p><strong>If you'd rather not.</strong> Use manual bill entry instead. Everything in SquadBill works without AI scanning.</p>
+<p><strong>Your permission comes first.</strong> The app asks before any receipt photo is sent: when you sign up, and again before the first scan on a device where you have not answered. If you choose Skip or Not now, nothing is sent, and AI receipt reading shows off in Me.</p>
+<p><strong>Payment slips (Pro).</strong> With AI slip check on, a slip you upload is sent to Google (Gemini) and OpenAI to read the amount and check the transfer. A slip can show names, bank names and account numbers. You are asked before the first one is sent, and you can turn it off in Me. With it off, the slip is uploaded without AI and the organiser confirms it.</p>
 <p><strong>No automated decisions about you.</strong> We do not use AI or automated processing to make decisions that produce legal or similarly significant effects.</p>
 <hr />
 <h2>4. Who we share it with</h2>
@@ -225,12 +232,12 @@ Email: <strong>pyae@brainattic.dev</strong></p>
 </tr>
 <tr>
 <td><strong>Google (Gemini)</strong></td>
-<td>Receipt images, for text extraction</td>
+<td>Receipt images, and payment slip images if AI slip check is on</td>
 <td>United States</td>
 </tr>
 <tr>
 <td><strong>OpenAI (GPT-4o)</strong></td>
-<td>Receipt images, for text extraction</td>
+<td>Receipt images, and payment slip images if AI slip check is on</td>
 <td>United States</td>
 </tr>
 <tr>
@@ -273,7 +280,7 @@ Email: <strong>pyae@brainattic.dev</strong></p>
 <p><strong>Your account.</strong> For as long as your account exists.</p>
 <p><strong>Bills, expenses, and payment records.</strong> For as long as your account exists. These are shared records — other members of a group rely on them for an accurate history of who paid what.</p>
 <p><strong>Messages and photos in chats.</strong> For as long as the group exists, or until deleted.</p>
-<p><strong>Receipt and payment slip images.</strong> Deleted <strong>90 days after the associated bill is settled</strong>. We keep them for that period so that group members can refer back to a receipt or check a payment if a question arises, and no longer.</p>
+<p><strong>Receipt and payment slip images.</strong> Kept for as long as the bill they belong to exists, so group members can check a receipt or a payment later.</p>
 <p><strong>Server logs.</strong> Typically up to 90 days.</p>
 <p><strong>When you delete your account.</strong> We delete your personal data from our active systems. Some information may remain in encrypted backups for a limited period before being overwritten. We may retain limited records where legally required, or to resolve a dispute.</p>
 <p><strong>A note on shared records.</strong> If you delete your account, bills you were part of may remain visible to other group members with your name removed, so that their own records stay accurate.</p>
@@ -298,7 +305,7 @@ Email: <strong>pyae@brainattic.dev</strong></p>
 <li><strong>See your data</strong> — most of it is visible in the app; email us for the rest</li>
 <li><strong>Correct it</strong> — edit your profile in the app, or ask us</li>
 <li><strong>Delete it</strong> — <strong>Me → Settings → Delete Account</strong> removes your account and data</li>
-<li><strong>Withdraw consent</strong> — remove your payment details, turn off push notifications in iOS Settings, or stop using AI scanning</li>
+<li><strong>Withdraw consent</strong> — remove your payment details, turn off push notifications in iOS Settings, or turn off <strong>AI receipt reading</strong> or <strong>AI slip check</strong> in <strong>Me</strong></li>
 <li><strong>Complain</strong> — to us at pyae@brainattic.dev, or to your data protection authority</li>
 </ul>
 <p>To exercise any right, email <strong>pyae@brainattic.dev</strong>. We respond within 30 days. We may need to verify your identity first.</p>
